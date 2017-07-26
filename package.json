@@ -1,0 +1,23 @@
+{
+  "name": "node-backend-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm run build && NODE_ENV=development node dist/server.js",
+    "dev": "NODE_ENV=development nodemon src/server.js  --exec babel-node ",
+    "build": "babel src -d dist",
+    "test": "NODE_ENV=test mocha 'test/**/*.js' --timeout 1000000000 --compilers js:babel-register"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
